@@ -29,14 +29,14 @@ module.exports = {
         test: /\.vue$/,
         loader: "vue-loader",
       },
-      // {
-      //   test: /\.tsx?$/,
-      //   loader: "ts-loader",
-      //   options: {
-      //     appendTsSuffixTo: [/\.vue$/],
-      //   },
-      //   exclude: /node_modules/,
-      // },
+      {
+        test: /\.tsx?$/,
+        loader: "ts-loader",
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+        },
+        exclude: /node_modules/,
+      },
       {
         test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "postcss-loader"],
