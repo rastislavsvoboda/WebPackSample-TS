@@ -1,5 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-// const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
 
@@ -46,18 +46,18 @@ module.exports = {
 
   plugins: [
     new VueLoaderPlugin(),
-    // new ModuleFederationPlugin({
-    //   name: "growlers",
-    //   filename: "remoteEntry.js",
-    //   remotes: {},
-    //   exposes: {
-    //     './Cart': './src/components/Cart.vue',
-    //     './Search': './src/components/Search.vue',
-    //     './Taps': './src/components/Taps.vue',
-    //     './store': './src/store.ts',
-    //   },
-    //   shared: require("./package.json").dependencies,
-    // }),
+    new ModuleFederationPlugin({
+      name: "app-shell",
+      filename: "remoteEntry.js",
+      remotes: {},
+      exposes: {
+        // './Cart': './src/components/Cart.vue',
+        // './Search': './src/components/Search.vue',
+        // './Taps': './src/components/Taps.vue',
+        // './store': './src/store.ts',
+      },
+      shared: require("./package.json").dependencies,
+    }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
     }),
