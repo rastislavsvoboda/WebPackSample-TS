@@ -47,7 +47,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new ModuleFederationPlugin({
-      name: "x-module1",
+      name: "module1",
       filename: "remoteEntry.js",
       remotes: {
         "module1": "module1@http://localhost:8081/remoteEntry.js"

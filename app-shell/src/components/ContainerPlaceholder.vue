@@ -1,6 +1,6 @@
 <template>
     <h1>{{name}}</h1>
-    <div>
+    <div class="embedded-container">
         <Search />
     </div>
 
@@ -13,7 +13,7 @@ import Search from "module1/Search";
 export default defineComponent({
     data() {
         return {
-            name: "placeholder"
+            name: "Module1"
         };
     },
     components: {
@@ -22,3 +22,10 @@ export default defineComponent({
     
 })
 </script>
+
+<style lang="scss" scoped>
+.embedded-container {
+  border: 2px dashed red;
+}
+
+</style>

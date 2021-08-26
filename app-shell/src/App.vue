@@ -62,9 +62,4 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
-.embedded-container {
-  border: 2px dashed red;
-}
 
-</style>
