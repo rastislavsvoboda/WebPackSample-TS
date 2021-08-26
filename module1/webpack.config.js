@@ -52,8 +52,8 @@ module.exports = {
       remotes: {},
       exposes: {
         // './Module1App': './src/App.vue',
-        // './Cart': './src/components/Cart.vue',
-        './Search': './src/components/Search.vue',
+        './AppWrapper': './src/views/AppWrapper.vue',
+        // './Search': './src/components/Search.vue',
         // './Taps': './src/components/Taps.vue',
         // './store': './src/store.ts',
       },
