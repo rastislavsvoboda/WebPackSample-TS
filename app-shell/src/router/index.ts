@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Settings from "../views/Settings.vue";
 import Home from "../views/Home.vue";
+import ContainerPlaceholder from "../components/ContainerPlaceholder.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -17,7 +18,13 @@ const routes: Array<RouteRecordRaw> = [
     path: "/settings",
     name: "settings",
     component: Settings,
-  }, 
+  },
+  {
+    path: "/ContainerPlaceholder",
+    name: "container",
+    component: ContainerPlaceholder,
+  },
+
  // {
   //   path: "/about",
   //   name: "About",

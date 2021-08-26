@@ -1,11 +1,11 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-// const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://localhost:8081/",
   },
 
   resolve: {
@@ -14,7 +14,7 @@ module.exports = {
 
   devServer: {
     contentBase: path.join(__dirname, "public"),
-    port: 8080,
+    port: 8081,
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
@@ -46,18 +46,19 @@ module.exports = {
 
   plugins: [
     new VueLoaderPlugin(),
-    // new ModuleFederationPlugin({
-    //   name: "growlers",
-    //   filename: "remoteEntry.js",
-    //   remotes: {},
-    //   exposes: {
-    //     './Cart': './src/components/Cart.vue',
-    //     './Search': './src/components/Search.vue',
-    //     './Taps': './src/components/Taps.vue',
-    //     './store': './src/store.ts',
-    //   },
-    //   shared: require("./package.json").dependencies,
-    // }),
+    new ModuleFederationPlugin({
+      name: "module1",
+      filename: "remoteEntry.js",
+      remotes: {},
+      exposes: {
+        // './Module1App': './src/App.vue',
+        // './Cart': './src/components/Cart.vue',
+        './Search': './src/components/Search.vue',
+        // './Taps': './src/components/Taps.vue',
+        // './store': './src/store.ts',
+      },
+      shared: require("./package.json").dependencies,
+    }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
     }),

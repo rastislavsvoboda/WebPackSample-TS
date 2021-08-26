@@ -1,18 +1,16 @@
 <template>
-    <h1>test</h1>
+  <h1>test co to do pekla robi</h1>
+  <Search />
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
-//   import Taps from './components/Taps';
-//   import Search from './components/Search';
-//   import Cart from './components/Cart';
+import { defineComponent } from "vue";
 
-  export default defineComponent({
-    components: {
-    //   Search,
-    //   Taps,
-    //   Cart,
-    }
-  })
+import Search from "./components/Search.vue";
+
+export default defineComponent({
+  components: {
+    Search,
+  },
+});
 </script>

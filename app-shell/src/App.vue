@@ -10,10 +10,16 @@
     </ul>
   </div>
   <router-view />
+  <!-- <div class="embedded-container">
+    <Search />
+  </div> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+// import Module1App from "module1/Module1App";
+// import Search from "module1/Search";
+
 
 export default defineComponent({
   data() {
@@ -35,7 +41,7 @@ export default defineComponent({
           id: "module-1",
           name: "Module1",
           icon: "",
-          link: "",
+          link: "ContainerPlaceholder",
         },
         {
           id: "module-2",
@@ -48,9 +54,17 @@ export default defineComponent({
     };
   },
   components: {
-    //   Search,
+    // Module1App,
+    //  Search
     //   Taps,
     //   Cart,
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.embedded-container {
+  border: 2px dashed red;
+}
+
+</style>
