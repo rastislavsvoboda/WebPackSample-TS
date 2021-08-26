@@ -1,5 +1,4 @@
 import { createApp } from "vue";
-import router from "./router";
 
 import "./index.scss";
 
@@ -8,6 +7,4 @@ import App from "./App";
 
 // load("hv-taplist");
 
-createApp(App)
-    .use(router)
-    .mount("#app");
+createApp(App).mount("#app");
