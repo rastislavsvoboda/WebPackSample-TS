@@ -53,7 +53,7 @@ module.exports = {
       exposes: {
         // './Module1App': './src/App.vue',
         './AppWrapper': './src/views/AppWrapper.vue',
-        // './Search': './src/components/Search.vue',
+        './Search': './src/components/Search.vue',
         // './Taps': './src/components/Taps.vue',
         // './store': './src/store.ts',
       },

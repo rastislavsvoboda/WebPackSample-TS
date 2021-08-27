@@ -1,5 +1,7 @@
 <template>
-    <Search />
+    <div class="wrapper-container">
+        <slot></slot>
+    </div>
 </template>
 
 <script lang="ts">
@@ -11,3 +13,13 @@ export default defineComponent({
 
 })
 </script>
+
+<style lang="scss" scooped>
+.wrapper-container {
+    background-color: yellow;
+    border-radius: 20px;
+    border: 1px solid green;
+    padding: 1rem;
+}
+
+</style>

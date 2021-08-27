@@ -1,6 +1,7 @@
 <template>
   <h1>test co to do pekla robi</h1>
   <AppWrapper>
+    <Search />
   </AppWrapper>
 </template>
 
@@ -8,13 +9,13 @@
 import { defineComponent } from "vue";
 
 import AppWrapper from "./views/AppWrapper.vue"
-// import Search from "./components/Search.vue";
+import Search from "./components/Search.vue";
 
 export default defineComponent({
   name: "Module1App",
   components: {
     AppWrapper,
-    // Search,
+    Search,
   },
 });
 </script>

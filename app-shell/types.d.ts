@@ -1,1 +1,1 @@
-// declare module "module1/Search";
+declare module "module1/Search";

@@ -1,8 +1,9 @@
 <template>
     <h1>{{name}}</h1>
     <div class="embedded-container">
-        <!-- <AppWrapper /> -->
-        <Search />
+        <AppWrapper>
+            <Search />
+        </AppWrapper>
     </div>
 
 </template>
@@ -11,7 +12,7 @@
 import { defineComponent } from "vue";
 import Search from "module1/Search";
 // import Module1App from "module1/Module1App";
-// import AppWrapper from "module1/AppWrapper";
+import AppWrapper from "module1/AppWrapper";
 
 export default defineComponent({
     data() {
@@ -20,7 +21,7 @@ export default defineComponent({
         };
     },
     components: {
-        // AppWrapper,
+        AppWrapper,
         Search
     }
     
